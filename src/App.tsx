@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
 import { Grid } from '@material-ui/core'
@@ -13,7 +13,8 @@ function App() {
     <Router>
       <Navbar />
         <div>
-        <Route exaat path='/'>
+        <Routes>
+        <Route path='/'>
             <Login />
           </Route>
         <Route path='/login'>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+          </Routes>
         </div>
       <Footer />
     </Router>
