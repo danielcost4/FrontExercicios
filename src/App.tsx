@@ -1,20 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
-import {Grid} from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import './App.css';
-import Home from './paginas/home/Home'
+import Home from './paginas/home/Home';
+import Login from './paginas/login/Login';
 
 
 function App() {
   return (
-    <>
-     <Navbar />
-
-       <Home />
-
-     <Footer />
-    </>
+    <Router>
+      <Navbar />
+        <div>
+        <Route exaat path='/'>
+            <Login />
+          </Route>
+        <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/home'>
+            <Home />
+          </Route>
+        </div>
+      <Footer />
+    </Router>
   );
 }
 
