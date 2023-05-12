@@ -31,7 +31,7 @@ function Login() {
             </Grid >
             <Grid xs={6} style={{}}>
                 backgroundImage: `url(https://i.imgur.com/Kzecj3b.jpeg)` 
-                backgroundRepeat: 'no-repeat, width: '100vh', minHeight: '100vh', backgroundSize: 'cover'
+                backgroundRepeat: 'no-repeat, width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backGroundPosition: 'center'
             </Grid >
         </Grid >
     )
